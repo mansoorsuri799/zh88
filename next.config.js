@@ -27,6 +27,26 @@ const nextConfig = {
 
   async redirects() {
     return [
+      {
+        source: '/download-card-rummy',
+        destination: '/download-zh88',
+        permanent: true,
+      },
+      {
+        source: '/deposit-money-in-card-rummy',
+        destination: '/deposit-money-in-zh88',
+        permanent: true,
+      },
+      {
+        source: '/withdraw-money-from-card-rummy',
+        destination: '/withdraw-money-from-zh88',
+        permanent: true,
+      },
+      {
+        source: '/card-rummy-for-pc',
+        destination: '/zh88-for-pc',
+        permanent: true,
+      },
       // /about was indexed by Google but the real page is /about-us
       {
         source: '/about',
@@ -35,7 +55,7 @@ const nextConfig = {
       },
       {
         source: '/blog/create-account-login',
-        destination: '/blog/create-card-rummy-account-and-login',
+        destination: '/blog/zh88-login-and-registration-guide',
         permanent: true,
       },
       // Malformed URLs Google crawled — send them home
@@ -65,8 +85,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/card-rummy-logo.webp',
-        destination: '/card-rummy.webp',
+        source: '/zh88-logo.webp',
+        destination: '/zh88.webp',
         permanent: true,
       },
     ];
@@ -82,7 +102,7 @@ const nextConfig = {
       // Redirect old 3Patti Blue logo to Card Rummy logo
       {
         source: '/3-patti-blue-logo.webp',
-        destination: '/card-rummy.webp',
+        destination: '/zh88.webp',
       },
     ];
   },

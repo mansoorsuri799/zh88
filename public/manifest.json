@@ -1,11 +1,11 @@
 {
-  "name": "Card Rummy",
-  "short_name": "Card Rummy",
-  "description": "Pakistan's premier card gaming platform offering Teen Patti, Rummy, Dragon vs Tiger and more. Earn real cash rewards!",
+  "name": "ZH88",
+  "short_name": "ZH88",
+  "description": "ZH88 Game – online earning platform with casino-style games, JazzCash & EasyPaisa payments in Pakistan.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06091F",
-  "theme_color": "#06091F",
+  "background_color": "#061510",
+  "theme_color": "#061510",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -13,10 +13,10 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/card-rummy.webp",
+      "src": "/zh88.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any maskable"
     }
   ]
-} 
+}

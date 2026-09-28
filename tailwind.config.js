@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#06091F',
-        accent: '#FFC107',
+        // Derived from ZH88 app icon: deep forest + gold
+        primary: '#061510',
+        secondary: '#0A1F18',
+        accent: '#F0D000',
       },
     },
   },
   plugins: [],
 }
-

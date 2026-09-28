@@ -1,281 +1,265 @@
 import Image from "next/image";
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { imageObjectLicensing } from '@/lib/schemaImageLicensing';
-import { APP_AGGREGATE_RATING, APP_DOWNLOAD_URL, APP_SCREENSHOTS, FACEBOOK_PROFILE_URL } from '@/lib/appFacts';
-import CtaButton from '@/components/CtaButton';
+import Link from "next/link";
+import { Metadata } from "next";
+import { imageObjectLicensing } from "@/lib/schemaImageLicensing";
+import {
+  APP_AGGREGATE_RATING,
+  APP_DOWNLOAD_URL,
+  APP_SCREENSHOTS,
+} from "@/lib/appFacts";
+import CtaButton from "@/components/CtaButton";
+import PhoneScreenshot from "@/components/PhoneScreenshot";
+import {
+  APP_CATEGORY,
+  APP_DOWNLOADS,
+  APP_LANGUAGES,
+  APP_NAME,
+  APP_OS,
+  APP_SIZE,
+  APP_UPDATE,
+  APP_VERSION,
+  ROUTES,
+  SITE_EMAIL,
+  SITE_NAME,
+  SITE_ORIGIN,
+} from "@/lib/site";
 
-// This additional metadata enhances the page-specific SEO
 export const metadata: Metadata = {
   title: {
-    default: "Card Rummy Pakistan v1.231 Free Download Official APK",
-    template: "%s | Card Rummy"
+    default: "ZH88 Game Download APK For Android – Real Money App 2026",
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "Card Rummy 2026 - Pakistan's #1 card game platform. Download Card Rummy APK, play Teen Patti, Rummy, Dragon vs Tiger & win real cash. Fast withdrawals via JazzCash & EasyPaisa. Join 500K+ players!",
+  description:
+    "Download ZH88 Game APK for Android in Pakistan. Casino-style cards, slots & prediction games with JazzCash & EasyPaisa. Free v1.3 – 30MB – 500K+ downloads.",
   keywords: [
-    "Card Rummy",
-    "card rummy game",
-    "card rummy download",
-    "card rummy app",
-    "card rummy apk",
-    "card rummy pakistan",
-    "card rummy online",
-    "download card rummy",
-    "card rummy real money",
-    "3 Patti Card Rummy",
-    "how to play card rummy",
-    "card rummy 2026",
-    "Pakistan card games",
-    "Teen Patti game",
-    "online rummy game",
-    "earn money playing cards",
-    "Android gaming app 2026",
-    "JazzCash gaming",
-    "EasyPaisa gaming",
-    "mobile card games",
-    "real money games Pakistan",
-    "card game earning app",
-    "Teen Patti online",
-    "Dragon vs Tiger",
-    "best earning app Pakistan",
-    "rummy card game",
-    "play rummy online",
-    "rummy game download"
+    "ZH88 Game",
+    "ZH88 APK",
+    "ZH88 download",
+    "ZH88 Game download",
+    "ZH88 Pakistan",
+    "ZH88 real money",
+    "download ZH88 Game",
+    "ZH88 Android APK",
   ],
   openGraph: {
-    title: 'Card Rummy Pakistan v1.231 Free Download Official APK',
-    description: 'Card Rummy 2026 - Pakistan\'s #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!',
+    title: "ZH88 Game Download APK For Android – Real Money App 2026",
+    description:
+      "ZH88 Game APK for Pakistan — play cards, slots & prediction games, claim bonuses, withdraw via JazzCash & EasyPaisa.",
     images: [
       {
-        url: 'https://cardrummyapp.com.pk/card-rummy.webp',
+        url: `${SITE_ORIGIN}/zh88.webp`,
         width: 512,
         height: 512,
-        alt: 'Card Rummy - Pakistan\'s #1 card game app. Play Teen Patti, Rummy, Dragon vs Tiger.'
+        alt: "ZH88 Game app icon for Android download",
       },
       {
-        url: 'https://cardrummyapp.com.pk/feature/og-image.webp',
+        url: `${SITE_ORIGIN}/feature/og-image.webp`,
         width: 512,
         height: 512,
-        alt: 'Card Rummy - Premier Card Gaming Platform'
+        alt: "ZH88 Game – real money Android app",
       },
-      {
-        url: 'https://cardrummyapp.com.pk/feature/og-image-square.webp',
-        width: 512,
-        height: 512,
-        alt: 'Card Rummy - Premier Card Gaming Platform'
-      }
     ],
-    type: 'website'
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Card Rummy Pakistan v1.231 Free Download Official APK',
-    description: 'Card Rummy 2026 - Pakistan\'s #1 card game platform. Join 500K+ players. Play Teen Patti, Rummy & more. Earn real money with JazzCash & EasyPaisa. Download now!',
-    images: ['https://cardrummyapp.com.pk/card-rummy.webp', 'https://cardrummyapp.com.pk/feature/og-image.webp']
+    card: "summary_large_image",
+    title: "ZH88 Game Download APK For Android – Real Money App 2026",
+    description:
+      "ZH88 Game APK for Pakistan — play cards, slots & prediction games, claim bonuses, withdraw via JazzCash & EasyPaisa.",
+    images: [`${SITE_ORIGIN}/zh88.webp`, `${SITE_ORIGIN}/feature/og-image.webp`],
   },
   alternates: {
-    canonical: 'https://cardrummyapp.com.pk',
+    canonical: SITE_ORIGIN,
   },
 };
 
+const faqs = [
+  {
+    q: "Does the ZH88 Game offer you a practice mode?",
+    a: "Yes. ZH88 Game offers demos and low-stakes tables so new players can learn the flow before joining higher-stake rooms.",
+  },
+  {
+    q: "What is the main source of earnings?",
+    a: "Most earnings come from gameplay winnings. Daily login rewards, events, referrals, and tournaments can add extra value when used carefully.",
+  },
+  {
+    q: "Will the games work if the app is not updated?",
+    a: "Older builds may open, but features, matchmaking, and security fixes work best on the latest ZH88 Game version. Update when a new APK is available.",
+  },
+  {
+    q: "Are there any hidden charges on the ZH88 Game?",
+    a: "The APK download is free. Deposits and withdrawals follow the amounts and wallet rules you confirm in the app. Always review offer terms before claiming bonuses.",
+  },
+  {
+    q: "Does ZH88 work in offline mode?",
+    a: "No. ZH88 Game needs a stable internet connection for live rooms, wallet actions, and account sync.",
+  },
+  {
+    q: "Do you get any reward for daily logging in the app?",
+    a: "Yes. Continuous login streaks can unlock coins, cash credits, or free spins depending on the current promotion.",
+  },
+  {
+    q: "Can your account be temporarily blocked on the ZH88 Game?",
+    a: "Yes. Suspicious activity, rule breaches, or incomplete verification can lead to a temporary hold until support reviews the account.",
+  },
+  {
+    q: "Is it a safe option for long-term gaming?",
+    a: "ZH88 can be used more safely when you download from a trusted source, protect OTPs, use strong passwords, and treat play as entertainment—not guaranteed income.",
+  },
+  {
+    q: "Is identity verification required on the ZH88 Game?",
+    a: "Basic signup uses phone or email with OTP. Extra verification may be requested before larger withdrawals to protect wallets from fraud.",
+  },
+];
+
 export default function Home() {
-  // Schema.org structured data for SEO
   const schemaData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://cardrummyapp.com.pk/#website",
-        "url": "https://cardrummyapp.com.pk/",
-        "name": "Card Rummy",
-        "description": "Pakistan's premier card game platform with Teen Patti, Rummy, Dragon Tiger and more",
-        "inLanguage": "en-US"
+        "@id": `${SITE_ORIGIN}/#website`,
+        url: `${SITE_ORIGIN}/`,
+        name: SITE_NAME,
+        description:
+          "ZH88 Game download site for Android players in Pakistan seeking casino-style games and real cash rewards.",
+        inLanguage: "en-US",
       },
       {
         "@type": "WebPage",
-        "@id": "https://cardrummyapp.com.pk/#webpage",
-        "url": "https://cardrummyapp.com.pk/",
-        "name": "Card Rummy Pakistan v1.231 Free Download Official APK",
-        "description": "Card Rummy 2026 - Pakistan's #1 card game platform. Download Card Rummy APK, play Teen Patti, Rummy, Dragon vs Tiger & win real cash.",
-        "isPartOf": { "@id": "https://cardrummyapp.com.pk/#website" },
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [
-            "#what-is-card-rummy",
-            "#why-card-rummy-popular",
-            "#how-to-start",
-            "#download",
-            "#card-rummy-features",
-            "#card-rummy-games",
-            "#card-rummy-bonuses",
-            "#register-login",
-            "#deposit-withdraw",
-            "#safety-security",
-            "#faq"
-          ]
-        },
-        "primaryImageOfPage": {
+        "@id": `${SITE_ORIGIN}/#webpage`,
+        url: `${SITE_ORIGIN}/`,
+        name: "ZH88 Game Download APK For Android – Real Money App 2026",
+        description:
+          "Download ZH88 Game APK for Android. Play cards, slots and prediction games with JazzCash and EasyPaisa support.",
+        isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+        primaryImageOfPage: {
           "@type": "ImageObject",
-          "url": "https://cardrummyapp.com.pk/card-rummy.webp",
-          "width": 512,
-          "height": 512,
-          "name": "Card Rummy",
-          "description": "Card Rummy - Pakistan's #1 card game app. Official brand image. Play Teen Patti, Rummy, Dragon vs Tiger. Download Card Rummy APK for Android.",
-          ...imageObjectLicensing
-        }
-      },
-      {
-        "@type": "ImageObject",
-        "@id": "https://cardrummyapp.com.pk/card-rummy.webp#primary",
-        "url": "https://cardrummyapp.com.pk/card-rummy.webp",
-        "contentUrl": "https://cardrummyapp.com.pk/card-rummy.webp",
-        "name": "Card Rummy",
-        "description": "Card Rummy - Pakistan's premier card game app. Official Card Rummy brand image with playing cards. Play Teen Patti, Rummy, Dragon vs Tiger and win real cash. Download Card Rummy APK.",
-        "width": 512,
-        "height": 512,
-        ...imageObjectLicensing
+          url: `${SITE_ORIGIN}/zh88.webp`,
+          width: 512,
+          height: 512,
+          name: "ZH88 Game",
+          description: "ZH88 Game official app icon for Android APK download",
+          ...imageObjectLicensing,
+        },
       },
       {
         "@type": "Organization",
-        "@id": "https://cardrummyapp.com.pk/#organization",
-        "name": "Card Rummy",
-        "url": "https://cardrummyapp.com.pk/",
-        "logo": {
+        "@id": `${SITE_ORIGIN}/#organization`,
+        name: SITE_NAME,
+        url: `${SITE_ORIGIN}/`,
+        logo: {
           "@type": "ImageObject",
-          "url": "https://cardrummyapp.com.pk/card-rummy.webp",
-          "width": 512,
-          "height": 512,
+          url: `${SITE_ORIGIN}/zh88.webp`,
+          width: 512,
+          height: 512,
           ...imageObjectLicensing,
-          "creditText": "Card Rummy logo"
+          creditText: "ZH88 logo",
         },
-        "sameAs": [
-          FACEBOOK_PROFILE_URL
-        ],
-        "contactPoint": {
+        contactPoint: {
           "@type": "ContactPoint",
-          "email": "support@cardrummyapp.com.pk",
-          "contactType": "Customer Support",
-          "areaServed": "PK"
-        }
+          email: SITE_EMAIL,
+          contactType: "Customer Support",
+          areaServed: "PK",
+        },
       },
       {
         "@type": "SoftwareApplication",
-        "name": "Card Rummy",
-        "operatingSystem": "Android 5.0+",
-        "applicationCategory": "GameApplication",
-        "image": "https://cardrummyapp.com.pk/card-rummy.webp",
-        "logo": "https://cardrummyapp.com.pk/card-rummy.webp",
-        "aggregateRating": APP_AGGREGATE_RATING,
-        "offers": {
+        name: APP_NAME,
+        operatingSystem: APP_OS,
+        applicationCategory: "GameApplication",
+        image: `${SITE_ORIGIN}/zh88.webp`,
+        logo: `${SITE_ORIGIN}/zh88.webp`,
+        aggregateRating: APP_AGGREGATE_RATING,
+        offers: {
           "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "PKR"
+          price: "0",
+          priceCurrency: "PKR",
         },
-        "downloadUrl": APP_DOWNLOAD_URL,
-        "softwareVersion": "V1.231",
-        "fileSize": "49MB",
-        "description": "Card Rummy is Pakistan's most popular online card gaming app where players earn real money by playing Teen Patti, Rummy, Dragon vs Tiger, Andar Bahar, and more. It supports fast deposits and withdrawals via JazzCash and EasyPaisa, offers daily bonuses and VIP rewards, and has over 500,000 active players across Pakistan.",
-        "screenshot": [...APP_SCREENSHOTS],
-        "author": {
+        downloadUrl: APP_DOWNLOAD_URL,
+        softwareVersion: APP_VERSION,
+        fileSize: APP_SIZE,
+        description:
+          "ZH88 Game is an online mobile gaming platform where players enjoy casino-style cards, slots, and prediction games with local JazzCash and EasyPaisa payments in Pakistan.",
+        screenshot: [...APP_SCREENSHOTS],
+        author: {
           "@type": "Organization",
-          "name": "Card Rummy"
-        }
+          name: SITE_NAME,
+        },
+      },
+      {
+        "@type": "HowTo",
+        name: "How to Download and Install the ZH88 Game",
+        description: "Install ZH88 Game APK on Android in a few steps.",
+        step: [
+          {
+            "@type": "HowToStep",
+            position: 1,
+            name: "Open the official site",
+            text: "Visit the official ZH88 website on Chrome.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 2,
+            name: "Download the APK",
+            text: "Tap the download button and wait for the file to finish.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 3,
+            name: "Allow unknown sources",
+            text: "Enable installation from unknown sources in Android security settings.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 4,
+            name: "Install the APK",
+            text: "Open the APK from Downloads and confirm installation.",
+          },
+          {
+            "@type": "HowToStep",
+            position: 5,
+            name: "Register and play",
+            text: "Open ZH88 Game, create an account, and start playing.",
+          },
+        ],
       },
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Card Rummy is Pakistan's premier online card game platform where you can play Teen Patti, Rummy, Dragon vs Tiger, and many other exciting casino games. Card Rummy offers real cash rewards with fast withdrawals via JazzCash and EasyPaisa."
-            }
+        mainEntity: faqs.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
           },
-          {
-            "@type": "Question",
-            "name": "How to download Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can download Card Rummy APK from the official website cardrummyapp.com.pk. The app is available for Android devices and can be installed directly by downloading the APK file."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How to download Card Rummy app for Android?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "To download the Card Rummy app for Android, visit cardrummyapp.com.pk, click the download button, enable Unknown Sources in your settings, and install the APK file. The Card Rummy game is free to download and works on Android 5.0 or higher."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is Card Rummy safe and legal?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, Card Rummy is safe to use with secure data protection. The platform uses encrypted transactions and protects user privacy. However, legality depends on local laws, so always check your region's regulations."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How to earn money on Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can earn money on Card Rummy by playing games like Teen Patti, Rummy, and Dragon vs Tiger. The platform offers welcome bonuses, daily rewards, referral commissions, and deposit bonuses to help you start earning."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How to withdraw money from Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can withdraw money from Card Rummy using JazzCash or EasyPaisa. Go to the Wallet section, click Withdrawal, choose your payment method, enter the amount and account details, then confirm. Withdrawals are processed quickly."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What games are available on Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Card Rummy offers multiple games including Teen Patti, Classic Rummy, Dragon vs Tiger, Andar Bahar, Poker, and various slot games. All games are available 24/7 with real cash prizes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long do Card Rummy withdrawals take?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Card Rummy withdrawals through JazzCash and EasyPaisa are processed within 5-30 minutes. The platform offers fast, secure withdrawals with no hidden fees."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the minimum withdrawal on Card Rummy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The minimum withdrawal amount on Card Rummy depends on your payment method. Generally, you can withdraw as low as PKR 500 via JazzCash or EasyPaisa."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I contact Card Rummy customer support?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can contact Card Rummy customer support via 24/7 live chat within the app, email at support@cardrummyapp.com.pk, or through WhatsApp. Support team responds quickly to all queries."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What bonuses does Card Rummy offer?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Card Rummy offers welcome bonuses for new users, daily login bonuses, deposit bonuses, referral bonuses, and recharge rebates. Special VIP bonuses are available for high-volume players."
-            }
-          }
-        ]
-      }
-    ]
+        })),
+      },
+    ],
   };
+
+  const toc = [
+    { id: "introduction", label: "Introduction to ZH88 Game" },
+    { id: "what-is-zh88", label: "What is the ZH88 Game?" },
+    { id: "key-features", label: "Key Features of the ZH88 Game" },
+    { id: "whats-new", label: "What is New in the Latest Version" },
+    { id: "popular-pakistan", label: "Why ZH88 is Popular in Pakistan" },
+    { id: "how-to-earn", label: "How to Earn Real Cash Rewards" },
+    { id: "download-install", label: "How to Download and Install" },
+    { id: "system-requirements", label: "System Requirements" },
+    { id: "why-prefer", label: "Why Players Prefer ZH88" },
+    { id: "register", label: "How to Register an Account" },
+    { id: "login", label: "How to Log In" },
+    { id: "payment-methods", label: "Deposit and Withdraw Methods" },
+    { id: "deposit-withdraw-steps", label: "Deposit and Withdraw Steps" },
+    { id: "tips", label: "Tips and Tricks" },
+    { id: "safety", label: "Safety and Security" },
+    { id: "vip-lounge", label: "VIP Lounge" },
+    { id: "issues", label: "Common Issues and Solutions" },
+    { id: "pros-cons", label: "Pros and Cons" },
+    { id: "final-thoughts", label: "Final Thoughts" },
+    { id: "faq", label: "Frequently Asked Questions" },
+  ];
 
   return (
     <>
@@ -283,990 +267,604 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
-      
-      {/* Hero Section with improved spacing */}
-      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto" style={{ minHeight: '400px' }}>
+
+      {/* Hero */}
+      <section className="py-8 md:py-16 px-4 md:px-8 max-w-7xl mx-auto" style={{ minHeight: "400px" }}>
         <div className="md:flex md:items-start md:justify-between md:space-x-12 lg:space-x-20">
           <div className="md:w-1/2 space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                <span className="text-white">Card Rummy</span>
+                <span className="text-accent">{SITE_NAME}</span>
               </h1>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
-                <span className="text-[#FFA500]">Download APK & Play</span>{' '}
-                <span className="text-white">Real Money Games in Pakistan 2026</span>
-              </h2>
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-snug">
+                Game Download APK For Android – Real Money App 2026
+              </p>
             </div>
-            
-            <p className="text-lg text-gray-300 leading-relaxed" style={{ contain: 'layout style', minHeight: '120px', display: 'block' }}>
-              <Link href="/" className="text-accent hover:underline">Card Rummy</Link> is Pakistan's premier online card game platform, where you can play more than 30+ exciting casino games. Card Rummy offers the best card gaming experience with attractive graphics, smooth gameplay, and real cash rewards. So download now, start playing, and win real money with fast withdrawals via JazzCash and Easy Paisa.
+
+            <p className="text-lg text-gray-300 leading-relaxed">
+              <Link href="/" className="text-accent hover:underline">
+                ZH88 Game
+              </Link>{" "}
+              is an online earning platform that is popular for its casino-style games and practical reward options.
+              You can download the Android APK from this page and explore cards, slots, and prediction games with a
+              simple layout built for Pakistani players.
             </p>
 
-            {/* Download Button */}
-            <div className="flex justify-center my-8">
-              <CtaButton>DOWNLOAD NOW</CtaButton>
+            <div className="flex flex-col sm:flex-row items-center gap-4 my-6">
+              <CtaButton ariaLabel="Download ZH88 Game APK">Download ZH88 Game</CtaButton>
+              <div className="flex items-center gap-2 text-sm text-gray-300" aria-label="App rating 4.5 out of 5 from 500000 ratings">
+                <span className="text-accent font-bold text-lg">4.5</span>
+                <span className="text-accent" aria-hidden="true">★★★★☆</span>
+                <span>(500,000) · Free · Android · Game</span>
+              </div>
             </div>
 
-            {/* Stats Grid with improved spacing */}
-            <div className="flex flex-row gap-4 justify-center mt-8 mb-4" style={{ minHeight: '120px' }}>
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px]" style={{ minHeight: '120px' }}>
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1">500K+</div>
+            <div className="flex flex-row gap-4 justify-center mt-6" style={{ minHeight: "120px" }}>
+              <div className="bg-secondary p-6 rounded-2xl text-center flex-1 max-w-[180px]">
+                <div className="text-white text-2xl font-bold mb-1">{APP_DOWNLOADS}</div>
                 <div className="text-gray-400 text-sm">Downloads</div>
               </div>
-              
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px]" style={{ minHeight: '120px' }}>
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1">200K+</div>
-                <div className="text-gray-400 text-sm">Ratings</div>
+              <div className="bg-secondary p-6 rounded-2xl text-center flex-1 max-w-[180px]">
+                <div className="text-white text-2xl font-bold mb-1">4.5★</div>
+                <div className="text-gray-400 text-sm">Rating</div>
               </div>
-              
-              <div className="bg-[#0A1029] p-6 rounded-2xl text-center flex-1 max-w-[180px]" style={{ minHeight: '120px' }}>
-                <svg className="w-6 h-6 mb-3 text-[#FFA500] mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                </svg>
-                <div className="text-white text-2xl font-bold mb-1">49MB</div>
+              <div className="bg-secondary p-6 rounded-2xl text-center flex-1 max-w-[180px]">
+                <div className="text-white text-2xl font-bold mb-1">{APP_SIZE}</div>
                 <div className="text-gray-400 text-sm">App Size</div>
               </div>
             </div>
-
-            {/* Android only notice */}
             <p className="text-gray-400 text-sm text-center italic">*Available for Android devices only</p>
           </div>
 
-          {/* Hero Image – single component, responsive sizing via CSS */}
-          <figure
-            className="mt-8 md:mt-0 md:w-1/2 flex justify-center md:justify-end"
-            itemScope
-            itemType="https://schema.org/ImageObject"
-          >
-            <meta itemProp="name" content="Card Rummy" />
-            <meta itemProp="description" content="Card Rummy - Pakistan's #1 card game app. Play Teen Patti, Rummy, Dragon vs Tiger. Download Card Rummy APK for Android." />
-            <meta itemProp="url" content="https://cardrummyapp.com.pk/card-rummy.webp" />
+          <figure className="mt-8 md:mt-0 md:w-1/2 flex justify-center md:justify-end">
             <Image
-              src="/card-rummy.webp"
-              alt="Card Rummy – Pakistan's #1 Card Game App"
-              title="Card Rummy – Download & Play Teen Patti, Rummy, Dragon vs Tiger"
+              src="/zh88.webp"
+              alt="ZH88 Game official Android app icon"
+              title="ZH88 Game – Download APK for Android"
               width={320}
               height={320}
               className="object-contain drop-shadow-2xl w-[260px] h-[260px] md:w-[320px] md:h-[320px]"
-              priority={true}
+              priority
               fetchPriority="high"
               quality={80}
               sizes="(max-width: 768px) 260px, 320px"
-              itemProp="image"
             />
-            <figcaption className="sr-only">Card Rummy – Pakistan&apos;s #1 card game app. Download the APK and play Teen Patti, Rummy, Dragon vs Tiger. Win real cash via JazzCash &amp; EasyPaisa.</figcaption>
           </figure>
         </div>
       </section>
 
-      {/* App Specifications Table with improved spacing */}
+      {/* APK details */}
       <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto" id="download">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-[#FFA500]">Download Info Table</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-accent">ZH88 Game APK Details</h2>
         <div className="overflow-hidden rounded-2xl shadow-2xl border border-gray-800">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-800">
-              <tbody className="divide-y divide-gray-800">
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">App Name</td>
-                  <td className="py-4 px-6 text-left text-white">Card Rummy</td>
-                </tr>
-                <tr className="bg-[#06091F]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Developer</td>
-                  <td className="py-4 px-6 text-left text-white">eriocardrummy dev</td>
-                </tr>
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Category</td>
-                  <td className="py-4 px-6 text-left text-white">Cards, Game</td>
-                </tr>
-                <tr className="bg-[#06091F]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Size</td>
-                  <td className="py-4 px-6 text-left text-white">49MB</td>
-                </tr>
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Latest Version</td>
-                  <td className="py-4 px-6 text-left text-white">V1.231</td>
-                </tr>
-                <tr className="bg-[#06091F]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Required OS</td>
-                  <td className="py-4 px-6 text-left text-white">Android 5.0+</td>
-                </tr>
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Update</td>
-                  <td className="py-4 px-6 text-left text-white">1st-January-2026</td>
-                </tr>
-                <tr className="bg-[#06091F]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Downloads</td>
-                  <td className="py-4 px-6 text-left text-white">500k+</td>
-                </tr>
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Rating Count</td>
-                  <td className="py-4 px-6 text-left text-white">200000+</td>
-                </tr>
-                <tr className="bg-[#06091F]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Language</td>
-                  <td className="py-4 px-6 text-left text-white">English, Urdu</td>
-                </tr>
-                <tr className="bg-[#0a1029]/50">
-                  <td className="py-4 px-6 text-left font-medium text-white">Price</td>
-                  <td className="py-4 px-6 text-left text-white">Free (0$)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* Overview Section */}
-      <section id="overview" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Overview</h2>
-          <div className="space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              This app is divided into various sections, including card games, slots, poker, and many others, making it easy to find games that you want to play. CardRummy is designed with modern graphics, smooth gameplay, and an easy interface that makes this platform more suitable for both beginners and experienced players. This app also offers you great and interesting services, allowing you to earn significant money even by investing a small amount. You can also win real cash rewards or bonuses for free. So, download the game, and start playing your favorite games to earn real cash for free.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* What is Card Rummy Section */}
-      <section id="what-is-card-rummy" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">What is Card Rummy?</h2>
-          <div className="space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              Card Rummy is Pakistan's most popular online card game platform that combines classic card games like Teen Patti and Rummy with modern gaming technology. When people search for "Card Rummy", they're looking for a trusted platform to play card games and earn real money. Card Rummy delivers exactly that - a safe, secure, and exciting gaming experience where you can play different card games to earn money. It has become the go-to platform for card game enthusiasts in Pakistan who want to enjoy beautiful design, simple settings, classic themes, and easy gameplay options.
-            </p>
-
-            <p className="text-gray-300 leading-relaxed">
-              The Card Rummy platform allows you to withdraw your winnings or deposit money anytime using local payment methods like JazzCash and EasyPaisa. When you complete your deposit, you receive a deposit bonus as well. With its attractive visuals, user-friendly design, and exciting offers, Card Rummy stands out as one of the most enjoyable and engaging casino-style card games available in Pakistan today.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Card Rummy Popular Section */}
-      <section id="why-card-rummy-popular" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Why Card Rummy Game so Popular?</h2>
-          <div className="space-y-6">
-            <p className="text-gray-300 leading-relaxed">
-              The 3 Patti Card Rummy game is very popular because it allows you to earn real money while having fun. It is easy to play because it provides you with simple rules that are very easy to understand, especially for beginners. The design of this app is very beautiful and colorful, which gives you a real casino experience on your device. Players love this app because you can withdraw and deposit money easily through Easypaisa and Jazzcash without facing any delays.
-            </p>
-
-            <p className="text-gray-300 leading-relaxed">
-              It also includes many exciting games such as Teen Patti, Dragon vs Tiger, Poker, Rummy, and Slots, so that you never feel bored. The other main reason for the popularity of 3 Patti Card Rummy is its daily bonus and rewards that help you earn coins and extra cash. It is very safe and secure and can protect your personal details or money, and work smoothly even on low-storage devices.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How to Start Section */}
-      <section id="how-to-start" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">How Can We Start with Card Rummy?</h2>
-          <div className="space-y-4">
-            <p className="text-gray-300 leading-relaxed">To start the CardRummy game, follow the given steps:</p>
-            <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-              <li>Firstly, open the official website of 3 Patti Card Rummy and <a href="https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline font-semibold">download the APK file</a> to your device.</li>
-              <li>Once downloaded then click on the downloaded APK file to start the installation by allowing the Unknown Sources.</li>
-              <li>Once installation is complete, click on it to open the 3 Patti Card Rummy app.</li>
-              <li>When the app opens then log in with your mobile number or just play as a guest.</li>
-              <li>When you log in, you will get free chips or welcome bonuses to start playing the game.</li>
-              <li>Choose a table or game that you want to play, and start enjoying the game.</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Game Screenshots Section */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-[#06091F] rounded-xl p-8">
-          <h2 className="text-4xl font-bold mb-12 text-[#FFA500] text-center">Card Rummy App Screenshots</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-            {/* Main Game Interface */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-game-interface.webp"
-                  alt="Card Rummy Game Interface"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Game Interface</p>
-            </div>
-
-            {/* Games Collection */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-games.webp"
-                  alt="Card Rummy Games Collection"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Games Collection</p>
-            </div>
-
-            {/* Bonuses */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-earn-bonus.webp"
-                  alt="Card Rummy Bonuses & Rewards"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Bonuses & Rewards</p>
-            </div>
-
-            {/* Add Money */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-add-money.webp"
-                  alt="Card Rummy Deposit Money"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Add Money</p>
-            </div>
-
-            {/* Withdraw Money */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-withdraw-money.webp"
-                  alt="Card Rummy Withdraw Money"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Withdraw Money</p>
-            </div>
-
-            {/* Refer and Earn */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-refer-and-earn.webp"
-                  alt="Card Rummy Refer and Earn"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Refer & Earn</p>
-            </div>
-
-            {/* Recharge Rebate */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-recharge-rebate.webp"
-                  alt="Card Rummy Recharge Rebate"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Recharge Rebate</p>
-            </div>
-
-            {/* Bind Email */}
-            <div className="w-full">
-              <div className="rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/card-rummy-bind-mail.webp"
-                  alt="Card Rummy Bind Email"
-                  width={400}
-                  height={711}
-                  className="w-full h-auto"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-              <p className="text-center text-gray-300 mt-3 font-medium">Account Security</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="card-rummy-features" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-accent">Top Features of Card Rummy</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">1: Real Money Earning</h3>
-            <p className="text-gray-300">Card Rummy allows you to earn real cash rewards just by playing the game that you want to play or like. Whether you enjoy teen patti, poker, or rummy, every match provides you with a chance to win money. This app directly transfers your earnings through the local and easy payment methods safely.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">2: Easy Withdraw & Deposit</h3>
-            <p className="text-gray-300">With 3 Patti Card Rummy, you can manage your money in a super simple or fast way. With just a few steps, you can withdraw or deposit money anytime using local payment methods, such as JazzCash or EasyPaisa. It also ensures you have secure and quick transactions without any delays.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">3: Attractive Interface</h3>
-            <p className="text-gray-300">This app is designed with a bright, colorful, and modern interface that can attract its users. The background music, smooth animations, and clear layout create an amazing or pleasant experience. Each section of this app is designed very well, so that you can find your favourite game easily.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">4: Popular Games</h3>
-            <p className="text-gray-300">3 Card Rummy provides you with a wide variety of famous games in one app so that you can enjoy dragon vs tiger, poker, slots, and many other exciting options. Each game of this app has simple rules that make it perfect for both beginners and experienced players.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">5: Daily Bonus</h3>
-            <p className="text-gray-300">This app rewards you every day with free login bonuses or chips. You can earn extra coins just by opening the app regularly. It also provides special rewards on weekly or festival occasions. These bonuses help you to keep playing even if you do not want to deposit money.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">6: Referral Earning</h3>
-            <p className="text-gray-300">3 Patti Card Rummy offers you a referral program where you can earn money without playing games. You just need to share your referral link with your friends and invite them to join. When they start playing games, you receive a commission automatically.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">7: Fast Performance</h3>
-            <p className="text-gray-300">This app runs smoothly on almost every Android device, even on older models. It does not hang, crash, or use too much storage space. The lightweight design of this app helps it to run faster and load to provide a smooth gameplay.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">8: Safe & Secure Platform</h3>
-            <p className="text-gray-300">In 3Patti Card Rummy, your privacy and money are completely safe because it uses a secure payment method and data protection system that keeps everything private. This app is trusted by thousands of players for its reliability.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">9: Free to Play</h3>
-            <p className="text-gray-300">3 Patti Card Rummy is free to download and does not ask for any registration fees. Through this feature, you can start playing games quickly with free chips that are given by the app. This feature is a perfect choice, especially for beginners.</p>
-          </div>
-          <div className="bg-secondary px-8 py-8 rounded-lg card-glow">
-            <h3 className="text-xl font-semibold mb-3 text-accent">10: 24/7 Support</h3>
-            <p className="text-gray-300">This app also provides you with fast customer support, which helps you anytime. Whether you face a deposit issue or a technical error, this support team responds quickly. You can contact the team directly through the app for quick help.</p>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Available Games Section */}
-      <section id="card-rummy-games" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Best Games to Play on Card Rummy</h2>
-          
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4 text-[#FFA500]">1: Multiplayer Games</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Tiger Dragon <span className="text-[#f97316]">(Hot)</span></p>
-          </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">7 UP Down <span className="text-[#f97316]">(Hot)</span></p>
-          </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Zoo Roulette <span className="text-[#f97316]">(Hot)</span></p>
-          </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Crash</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Car Roulette</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Andar Bahar</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Teenpatti 20-20</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Best of Five</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-2xl font-semibold mb-4 text-[#FFA500]">2: Skill-Based Games</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Domino <span className="text-[#f97316]">(Hot)</span></p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Rummy <span className="text-[#f97316]">(Hot)</span></p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Teen Patti</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Fishing Rush</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">10 Cards</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Poker</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Ludo</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Black Jack</p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold mb-4 text-[#FFA500]">3: Slots</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Mines <span className="text-[#f97316]">(Hot)</span></p>
-            </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Fruit Line</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">777 Bingo</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Rattling GEMS</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Video Poker 1, 2</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">Wild Energy</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">WoW Slot</p>
-              </div>
-              <div className="bg-[#0A1029] p-4 rounded-lg">
-                <p className="text-white font-medium">God of Fortune</p>
-          </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bonuses Section */}
-      <section id="card-rummy-bonuses" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Benefits for New Players by Joining Card Rummy</h2>
-        
-        {/* New Player Welcome Bonus */}
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-[#FFA500]">1: New Player Welcome Bonus</h3>
-          <p className="text-gray-300 mb-4">3Patti offers a 100% recharge bonus for all new, fresh users on their first deposit in this game.</p>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-800 rounded-lg overflow-hidden">
-              <thead className="bg-[#0a1029]">
-                <tr>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Deposit Amount (PKR)</th>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Bonus Amount (PKR)</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-800">
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">100</td><td className="py-3 px-6 text-gray-300">100</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">1000</td><td className="py-3 px-6 text-gray-300">1000</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">5000</td><td className="py-3 px-6 text-gray-300">5000</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">10,000</td><td className="py-3 px-6 text-gray-300">10,000</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">20,000</td><td className="py-3 px-6 text-gray-300">20,000</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">100,000</td><td className="py-3 px-6 text-gray-300">100,000</td></tr>
-              </tbody>
-            </table>
-          </div>
-          </div>
-
-        {/* Recharge Rebate */}
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-4 text-[#FFA500]">2: Recharge Rebate</h3>
-          <p className="text-gray-300 mb-4">3 Patti Card Rummy game is also offering huge recharge rebate bonuses for every player when they deposit an amount.</p>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-800 rounded-lg overflow-hidden">
-              <thead className="bg-[#0a1029]">
-                <tr>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Rebate</th>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Recharge Required</th>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Required Wager</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-800">
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">5%</td><td className="py-3 px-6 text-gray-300">3000 PKR</td><td className="py-3 px-6 text-gray-300">2x</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">10%</td><td className="py-3 px-6 text-gray-300">5000</td><td className="py-3 px-6 text-gray-300">3x</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">15%</td><td className="py-3 px-6 text-gray-300">8000</td><td className="py-3 px-6 text-gray-300">4x</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">20%</td><td className="py-3 px-6 text-gray-300">10,000</td><td className="py-3 px-6 text-gray-300">5x</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">25%</td><td className="py-3 px-6 text-gray-300">20,000</td><td className="py-3 px-6 text-gray-300">6x</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">30%</td><td className="py-3 px-6 text-gray-300">50,000</td><td className="py-3 px-6 text-gray-300">7x</td></tr>
-              </tbody>
-            </table>
-          </div>
-          </div>
-
-        {/* Big Rebate on Recharge */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4 text-[#FFA500]">3: Big Rebate on Recharge</h3>
-          <p className="text-gray-300 mb-4">This type of reward is only available for deposit of a minimum of 3000PKR or more. It also depends upon VIP Level with increasing rebate bonus. It can be claimed every day.</p>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-800 rounded-lg overflow-hidden">
-              <thead className="bg-[#0a1029]">
-                <tr>
-                  <th className="py-3 px-6 text-left text-white font-semibold">VIP Level</th>
-                  <th className="py-3 px-6 text-left text-white font-semibold">Rebate</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-800">
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">V1-V2</td><td className="py-3 px-6 text-gray-300">1% rebate</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">V3-V4</td><td className="py-3 px-6 text-gray-300">2% rebate</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">V5-V6</td><td className="py-3 px-6 text-gray-300">3% rebate</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">V7-V8</td><td className="py-3 px-6 text-gray-300">4% rebate</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">V9-V10</td><td className="py-3 px-6 text-gray-300">5% rebate</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">V11-V12</td><td className="py-3 px-6 text-gray-300">6% rebate</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">V13-V14</td><td className="py-3 px-6 text-gray-300">7% rebate</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">V15-V16</td><td className="py-3 px-6 text-gray-300">8% rebate</td></tr>
-                <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">V17-V18</td><td className="py-3 px-6 text-gray-300">9% rebate</td></tr>
-                <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">V19-V20</td><td className="py-3 px-6 text-gray-300">10% rebate</td></tr>
-              </tbody>
-            </table>
-          </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Download Instructions */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How to Download Card Rummy APK Latest Version For Android?</h2>
-          <p className="text-gray-300 mb-4">To download the latest version of Card Rummy APK for Android devices, follow the given steps:</p>
-          <div className="mb-8">
-          <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-            <li>First, you open the browser on your Android device and click on the search bar.</li>
-            <li>In the search bar, type the latest version of Card Rummy and visit the trusted website.</li>
-            <li>On the trusted website, click on the Download button to start downloading.</li>
-            <li>Now wait a few seconds to complete the downloading process.</li>
-            <li>Once complete, that file will be saved in the Download Folder of the device.</li>
-          </ol>
-        </div>
-        
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Installation Guide for Card Rummy APK</h2>
-        <p className="text-gray-300 mb-4">After downloading to installing the Card Rummy APK, follow the given steps:</p>
-        <div className="mb-8">
-          <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-            <li>To start installation, your device grants permission to install unknown sources.</li>
-            <li>Open the Settings &lt; Security and enable the Install Unknown Apps.</li>
-            <li>After this, open the File Manager and go to the Download Folder.</li>
-            <li>Click on the download APK file, and the installation process will start.</li>
-            <li>Wait until the installation completes successfully on your device.</li>
-            <li>Once complete then the app icon will show on your device.</li>
-            <li>Click on it to launch the app and start playing the games that you want.</li>
-          </ol>
-        </div>
-
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">System Requirements</h2>
-        <div className="overflow-x-auto mb-8">
-          <table className="min-w-full divide-y divide-gray-800 rounded-lg overflow-hidden">
-            <thead className="bg-[#0a1029]">
-              <tr>
-                <th className="py-3 px-6 text-left text-white font-semibold">System</th>
-                <th className="py-3 px-6 text-left text-white font-semibold">Minimum</th>
-                <th className="py-3 px-6 text-left text-white font-semibold">Recommended</th>
-              </tr>
-            </thead>
+          <table className="min-w-full divide-y divide-gray-800">
             <tbody className="divide-y divide-gray-800">
-              <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">Operating System</td><td className="py-3 px-6 text-gray-300">Android 5.0+</td><td className="py-3 px-6 text-gray-300">Android 8.0 or above</td></tr>
-              <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">RAM</td><td className="py-3 px-6 text-gray-300">2GB or more</td><td className="py-3 px-6 text-gray-300">4GB or more</td></tr>
-              <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">Storage Space</td><td className="py-3 px-6 text-gray-300">At least 500 MB free</td><td className="py-3 px-6 text-gray-300">1GB free space</td></tr>
-              <tr className="bg-[#0a1029]/50"><td className="py-3 px-6 text-gray-300">Processor</td><td className="py-3 px-6 text-gray-300">Quad-core 1.5 GHz</td><td className="py-3 px-6 text-gray-300">Octa-core 2.0 GHz</td></tr>
-              <tr className="bg-[#06091F]/50"><td className="py-3 px-6 text-gray-300">Internet</td><td className="py-3 px-6 text-gray-300">Stable 3G or WiFi</td><td className="py-3 px-6 text-gray-300">Fast & stable 4G or WiFi</td></tr>
+              {[
+                ["App Name", APP_NAME],
+                ["Category", APP_CATEGORY],
+                ["App Size", APP_SIZE],
+                ["Version", APP_VERSION],
+                ["Required OS", APP_OS],
+                ["Last Update", APP_UPDATE],
+                ["Downloads", APP_DOWNLOADS],
+                ["Language", APP_LANGUAGES],
+                ["Price", "0$"],
+              ].map(([label, value], i) => (
+                <tr key={label} className={i % 2 === 0 ? "bg-secondary/50" : "bg-primary/50"}>
+                  <td className="py-4 px-6 font-medium text-white">{label}</td>
+                  <td className="py-4 px-6 text-white">{value}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
-
-        <div className="flex justify-center">
-          <CtaButton>DOWNLOAD NOW</CtaButton>
-          </div>
-        </div>
       </section>
 
-      {/* Account Creation */}
-      <section id="register-login" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How to Register & Login on Card Rummy?</h2>
-          
-          <h3 className="text-xl font-semibold mb-4 text-[#FFA500]">1: Register Method</h3>
-          <p className="text-gray-300 mb-4">To register the account on Card Rummy, follow the given steps:</p>
-          <div className="mb-8">
-          <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-            <li>Firstly, open the Card Rummy app on your device.</li>
-            <li>On the homescreen, click on the Register or Sign Up option.</li>
-            <li>Now, enter your valid mobile number or email address.</li>
-            <li>Set a strong password that can never be accessed easily.</li>
-            <li>Enter the OTP that you can receive through phone or email for verification.</li>
-            <li>Once verification is complete then your account will be created successfully.</li>
+      {/* TOC */}
+      <section className="py-8 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8 border border-gray-800">
+          <h2 className="text-2xl font-bold mb-6 text-accent">Table of Contents</h2>
+          <ol className="grid md:grid-cols-2 gap-2 list-decimal list-inside text-gray-300">
+            {toc.map((item) => (
+              <li key={item.id}>
+                <a href={`#${item.id}`} className="text-accent hover:underline">
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ol>
-          </div>
-
-          <h3 className="text-xl font-semibold mb-4 text-[#FFA500]">2: Login Method</h3>
-          <p className="text-gray-300 mb-4">After registration, the next step is to log account for Follow the given steps:</p>
-          <div className="space-y-4">
-          <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-            <li>Open the Card Rummy app on your device.</li>
-            <li>Click on the Login button on the homescreen.</li>
-            <li>Enter your registered mobile number, email, or password.</li>
-            <li>Make sure that your entered details are correct.</li>
-            <li>Once confirmed, tap on the Sign in or Login option.</li>
-            <li>If you forget your password, then use Forgot Password to reset it.</li>
-            <li>Once logging is complete, you can start playing games.</li>
-          </ol>
-          </div>
         </div>
       </section>
 
-      {/* Payment Methods Section */}
-      <section id="deposit-withdraw" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      <section id="introduction" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Ways to Deposit & Withdraw Money in Card Rummy</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-            <div className="bg-[#0A1029] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">1: Jazzcash</h3>
-              <p className="text-gray-300">Jazzcash is one of the most trusted and secure mobile banking services that allows you to deposit money quickly into your gaming account and start playing games quickly. It's a fast and safe transaction system that allows you to withdraw your winnings directly into your account wallet. The best part of this method is that you can wait a long time because the transactions are completed within seconds.</p>
+          <h2 className="text-3xl font-bold mb-6 text-accent">Introduction to ZH88 Game</h2>
+          <div className="md:flex md:gap-10 items-center">
+            <div className="space-y-4 text-gray-300 leading-relaxed md:w-2/3">
+              <p>
+                ZH88 Game APK is a fast-growing online platform that lets you play a wide variety of games and aim for
+                real cash rewards. The layout stays simple so you can move between categories without confusion, while
+                regular updates keep performance and features moving forward.
+              </p>
+              <p>
+                Daily activities and a reward-based system help beginners explore rooms without rushing into large
+                deposits. For players who want entertainment plus competitive sessions, ZH88 Game is a practical Android
+                option in Pakistan.
+              </p>
             </div>
-            <div className="bg-[#0A1029] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">2: Easypaisa</h3>
-              <p className="text-gray-300">Easypaisa is another secure and most commonly used payment method that is similar to the JazzCash method. It allows you to deposit or withdraw money without any difficulty. Through this method, you can add funds to your game account and transfer winnings to your Easypaisa wallet in just a few steps. The process of this method is very safe, reliable, and suitable for all types of users.</p>
-            </div>
-            <div className="bg-[#0A1029] p-6 rounded-lg md:col-span-2 lg:col-span-1">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">3: Bank Card</h3>
-              <p className="text-gray-300">Bank Card is a convenient withdrawal option that lets you send your winnings directly to your bank account. Simply choose your desired bank, enter your account number, user name, and email, then submit your withdrawal request. With Bank Card, you can withdraw up to PKR 20,000 maximum per transaction, making it ideal for larger payouts. This method provides a secure way to receive your earnings straight to your bank account.</p>
+            <div className="mt-6 md:mt-0 md:w-1/3 flex justify-center">
+              <PhoneScreenshot
+                src="/zh88-pakistan-games.webp"
+                alt="ZH88 Game lobby showing popular games available in Pakistan"
+                size="md"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Deposit Instructions */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-secondary rounded-xl p-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How to Deposit Money?</h2>
-            <p className="text-gray-300 mb-4">To deposit money in Card Rummy, follow the given steps:</p>
-                <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-              <li>First, open the Card Rummy app on your device and log in.</li>
-              <li>Now, click on the Wallet option that is available on the homescreen.</li>
-              <li>In this wallet section, click on the Deposit option.</li>
-              <li>Choose a payment method that you want to use.</li>
-              <li>Enter the amount that you want to deposit.</li>
-              <li>Click on the confirm option and wait to complete it.</li>
-              <li>Once complete, the balance will show in your game wallet.</li>
-                </ol>
-              </div>
-          <div className="bg-secondary rounded-xl p-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How to Withdraw Money?</h2>
-            <p className="text-gray-300 mb-4">To withdraw money in Card Rummy, follow the given steps:</p>
-                <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-              <li>Open the Card Rummy app and log in to your account.</li>
-              <li>Click on the Wallet option that is available on the main screen.</li>
-              <li>In the wallet section, click on the Withdrawal option.</li>
-              <li>Choose your payment method, like JazzCash, EasyPaisa, or Bank Card.</li>
-              <li>Now enter the amount that you want to withdraw.</li>
-              <li>Enter some required details, like the account number.</li>
-              <li>Double-check all entered details and click on Confirm.</li>
-              <li>Wait a few seconds to complete the withdrawal process.</li>
-              <li>Once complete, that money will be shown in your selected payment method.</li>
-                </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Tips and Tricks */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      <section id="what-is-zh88" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Tips & Tricks to Earn Maximum on Teen Patti Card Rummy Game</h2>
-          <div className="space-y-4">
-          <ul className="list-disc pl-5 space-y-3 text-gray-300">
-            <li><strong>Start with Small Bets:</strong> Always start a game with a small investment because it will help you to understand the game rules and overcome the risk of losing money. When you become confident, then increase your bet.</li>
-            <li><strong>Use Bonuses Wisely:</strong> Card Rummy offers you daily login bonuses, referral bonuses, or deposit rewards. It helps you to play more games without spending your one money or earning extra money.</li>
-            <li><strong>Play Popular Games:</strong> Focus on high-earning games such as Dragon vs Tiger or Teen Patti Classic that provide you with higher winning chances, and also attract players with better opportunities to earn.</li>
-            <li><strong>Invite Friends:</strong> Use the referral link system to invite friends every time your friends join, and then you can earn commission. The more friends you invite, the higher you can become.</li>
-            <li><strong>Stay Active Daily:</strong> Regularly log in to the app to collect the daily rewards or spin bonuses. Always stay active because it will increase your bonus balance or improve your chances of winning big.</li>
-            <li><strong>Withdraw on Time:</strong> When you earn a good amount then do not delay withdrawal. Always transfer your winnings as soon as possible through Jazcash or EasyPaisa to keep your money safe.</li>
-            <li><strong>Learn from Practice Mode:</strong> Before playing games with real money, try the free or demo mode as practice. This helps you to understand the gameplay easily and develop the winning strategies without any risk.</li>
-            <li><strong>Keep the Emotions in Control:</strong> Never play games with frustration or greed. Always stay calm or make smart decisions during the game because it helps you to avoid unnecessary losses.</li>
-            <li><strong>With Expert Players:</strong> Observe how other players make the moves. Through this, you can learn new techniques or strategies and timing from them to improve your skills.</li>
-            <li><strong>Avoid Fake Apps:</strong> Always download the original Card Rummy app through official or trusted sources because fake links or websites can steal your personal data or money.</li>
-          </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* What's New Section */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">What's New in the Latest Version of the Card Rummy?</h2>
-          <div className="space-y-4">
-            <ol className="list-decimal pl-5 space-y-3 text-gray-300">
-              <li>In the latest version, the game looks better with improved graphics and smooth animations.</li>
-              <li>Provide fast performance so that the app opens quickly and runs smoothly without lag.</li>
-              <li>Its menu and layout are simple, which makes it very easy, especially for new users.</li>
-              <li>In the latest versions, more games are added, such as Dragon vs Tiger, Rummy, and others.</li>
-              <li>The withdrawal or deposit options work faster and smoothly in the latest version.</li>
-              <li>In the latest version, better security measures can be used that can protect your account and money.</li>
-              <li>New bonuses and referral rewards provide you with more chances to earn money.</li>
-              <li>Old Errors or app issues are removed to offer a smooth gaming experience.</li>
-              <li>The background music or game sounds improve the app and provide more fun.</li>
-              <li>The new VIP system gives you extra prizes and benefits that help you stay active.</li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* Pros and Cons */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Pros & Cons of using Card Rummy</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">Pros</h3>
-            <div className="bg-[#0A1029] px-8 py-8 rounded-lg">
-              <ul className="list-disc pl-5 space-y-3 text-gray-300">
-                <li>Very simple and fun to play</li>
-                <li>Earn money with a small investment</li>
-                <li>Jazzcash and Easypaisa make payment easy</li>
-                <li>Many different games for enjoyment</li>
-                <li>Fast withdrawal of your money</li>
-                <li>Very easy to use and quick to start</li>
-                <li>Daily rewards and bonuses</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">Cons</h3>
-            <div className="bg-[#0A1029] px-8 py-8 rounded-lg">
-              <ul className="list-disc pl-5 space-y-3 text-gray-300">
-                <li>Risk of losing money</li>
-                <li>Sometimes withdrawals take time</li>
-                <li>Gameplay can be addictive</li>
-                <li>Run slow on weak phones</li>
-                <li>No legal Support</li>
-                <li>No Financial Freedom</li>
-                <li>Gameplay can be complicated</li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Safety Section */}
-      <section id="safety-security" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">About the Safety & Security of the Card Rummy</h2>
-          <div className="space-y-4">
-            <p className="text-gray-300 leading-relaxed">
-              Card Rummy is an online gaming platform that provides you with a safe and secure environment. It uses basic security features such as data encryption or SSL certificates that can protect your information. This app also supports local payment options such as JazzCash or Easy Paisa, which can make the transactions safer and secure. However, this app is not officially available on the Google Play Store and may come with some risks, such as malware or scams. So, it is important to make sure that you can download it from official, safe, and secure sources. Always avoid sharing your sensitive personal information or banking details.
+          <h2 className="text-3xl font-bold mb-6 text-accent">What is the ZH88 Game?</h2>
+          <div className="space-y-4 text-gray-300 leading-relaxed">
+            <p>
+              ZH88 Game App is an online mobile gaming platform where you can play casino-style games and chase real
+              cash outcomes. It is built for people who want real-time gameplay with promotions that can reduce the need
+              to fund every session from day one.
+            </p>
+            <p>
+              Local payment methods keep deposits and withdrawals familiar for Pakistani users. Fair-room rules and
+              account security features are part of the experience, so entertainment and competitive play sit side by
+              side.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Support Section */}
-      <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      <section id="key-features" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">Key Features of the ZH88 Game</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "User-Friendly Interface",
+              body: "The dashboard keeps game categories easy to scan. Clear menus and bright graphics help beginners understand options quickly and start a session with less friction.",
+            },
+            {
+              title: "Wide Range of Games",
+              body: "Cards, slots, and prediction games sit in one app. Each category has its own rhythm and reward pattern, and new titles appear with updates.",
+            },
+            {
+              title: "Attractive Bonuses & Rewards",
+              body: "Welcome offers, daily login bonuses, cashback, and festive events can stretch playtime when you follow the stated terms.",
+            },
+            {
+              title: "Secure Payment Methods",
+              body: "Encrypted gateways, wallet verification, and local rails such as JazzCash and EasyPaisa support smoother PKR transfers.",
+            },
+            {
+              title: "Quick Registration",
+              body: "Signup asks for basic details plus OTP verification. Password recovery stays straightforward so returning players can get back into rooms quickly.",
+            },
+            {
+              title: "Referral Earning System",
+              body: "Share your invite link or code. Successful registrations can add bonus value even when you are not in a live table.",
+              image: "/zh88-invite-friends.webp",
+              alt: "ZH88 Game invite friends referral screen",
+            },
+            {
+              title: "VIP Membership",
+              body: "Active players can climb VIP levels for stronger rewards, exclusive offers, priority withdrawals, and faster support paths.",
+            },
+            {
+              title: "Responsible Customer Support",
+              body: "Live chat, email, and FAQs cover account and technical questions. Live chat is best for quick steps; email suits longer cases.",
+            },
+          ].map((feature) => (
+            <div key={feature.title} className="bg-secondary rounded-xl p-6 border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{feature.body}</p>
+              {"image" in feature && feature.image ? (
+                <PhoneScreenshot
+                  src={feature.image}
+                  alt={feature.alt || feature.title}
+                  size="sm"
+                  className="mt-5"
+                />
+              ) : null}
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex justify-center">
+          <PhoneScreenshot
+            src="/zh88-features.webp"
+            alt="ZH88 Game feature highlights on the Android app home screen"
+            size="lg"
+          />
+        </div>
+      </section>
+
+      <section id="whats-new" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="bg-secondary rounded-xl p-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">How Can We Contact the Card Rummy?</h2>
-          <p className="text-gray-300 mb-6">To contact the customer support team of Card Rummy, you can use the given methods:</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-[#0A1029] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">Live Chat</h3>
-              <p className="text-gray-300">Card Rummy provides you with a live chat feature inside the app so that you can directly talk to the support team if you face any problems. Whether you face any issue like playing or using the app, this team responds to you quickly and helps you solve your issues in real time. Live chat is the fastest way to get support without leaving the app.</p>
-            </div>
-            <div className="bg-[#0A1029] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">WhatsApp</h3>
-              <p className="text-gray-300">You can also contact the support team through WhatsApp. You can simply use the number that is provided in the app to send your problem. This support team replies to you with instructions or solutions that make it easy to fix any problem. This WhatsApp support is very convenient because this is a simple and easy way to get help.</p>
-            </div>
-            <div className="bg-[#0A1029] p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-[#FFA500]">FAQs</h3>
-              <p className="text-gray-300">This app also dedicates a FAQs section where common questions are given with their answers. You can check this section before contacting the customer support team to save time. These FAQs mostly cover all topics such as registration, deposit, withdrawals, bonuses, and game rules. So, this is quick and easy to find the solution without waiting long.</p>
-            </div>
+          <h2 className="text-3xl font-bold mb-6 text-accent">What is New in the Latest Version of the ZH88 Game?</h2>
+          <div className="space-y-6 text-gray-300">
+            {[
+              ["01. Smart AI-Based Matchmaking System", "Opponents are matched closer to your recent skill level so rooms feel fairer for beginners and regulars."],
+              ["02. Personalized Recommendations", "The app studies what you play most and suggests similar categories so you spend less time searching."],
+              ["03. In-App Achievements", "Badges and titles unlock after milestones such as win streaks or tournament finishes."],
+              ["04. Advanced Transaction History", "Wallet analytics show clearer weekly and monthly summaries for deposits and withdrawals."],
+              ["05. Multi-Language Support", "Urdu and English options make menus easier for players across different regions."],
+              ["06. Low-Data Consumption", "Compressed graphics help mid-range phones stay smooth on 3G/4G connections."],
+            ].map(([title, body]) => (
+              <div key={title}>
+                <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+                <p className="leading-relaxed">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+      <section id="popular-pakistan" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
         <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-3xl font-bold mb-8 text-[#FFA500]">Frequently Asked Questions</h2>
-        <div className="space-y-4">
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              What is Card Rummy and how does it work?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              Card Rummy is Pakistan's premier online card game platform where you can play Teen Patti, Rummy, Dragon vs Tiger, and many other exciting casino games. You can play Card Rummy without depositing money by using free bonuses like the Welcome Bonus and Referral Commission. Card Rummy offers real cash rewards with fast withdrawals via JazzCash and EasyPaisa.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              How to download Card Rummy APK?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              To download Card Rummy APK, visit cardrummyapp.com.pk and click the download button. The Card Rummy APK file will be saved to your device. Enable "Install from Unknown Sources" in your Android settings, then open the downloaded file to install Card Rummy.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              What makes Card Rummy different from other card games?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              Card Rummy stands out with its simple design, fast transactions via JazzCash and EasyPaisa, exciting games like Teen Patti and Rummy, daily bonuses, and secure platform. Card Rummy offers the best card gaming experience in Pakistan with real cash rewards.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              Is Card Rummy safe and legal to use?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              Yes, Card Rummy is safe to use with secure data encryption and privacy protection. Card Rummy ensures your personal information and transactions are protected. However, the legality of online gaming depends on your local laws, so always check your region's regulations before playing Card Rummy.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              Can users lose money while playing?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              Yes, this app is involved with real money, so you might lose some amount if you do not play the games carefully. So, always play wisely and set a limit while playing.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              Is it possible to change the language of Card Rummy?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              Yes, it is possible because this app supports multiple languages, so you can change the language from the settings menu easily.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              How do referral rewards work?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              When you share your referral link with others, or when someone joins this app through your link, you can receive a commission.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              How to bind bank?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              To bind your bank for withdrawals, go to Wallet &gt; Withdrawal &gt; Bank Card. Select your desired bank from the list, then enter your account number, user name, and email. Once submitted, your bank account will be linked and ready for withdrawals.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              What is the maximum withdrawal at a time?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              For Bank Card withdrawals, the maximum amount you can withdraw at a time is PKR 20,000. For JazzCash and EasyPaisa, limits may vary—check the withdrawal section in the app for current limits.
-            </div>
-          </details>
-
-          <details className="group bg-[#0a1029]/50 rounded-xl border border-gray-700 hover:border-[#FFA500]/50 transition-all duration-300 shadow-md hover:shadow-lg">
-            <summary className="flex items-center justify-between p-4 cursor-pointer text-white font-medium hover:text-[#FFA500] transition-colors">
-              Is Card Rummy available on iPhone (iOS)?
-              <span className="transition group-open:rotate-180">
-                <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
-            </summary>
-            <div className="p-4 pt-0 text-gray-300 border-t border-gray-700/50">
-              This app is mainly available for Android devices, but you can also check the official website or store for updates about iOS availability.
-            </div>
-          </details>
-          </div>
-        </div>
-      </section>
-
-      {/* Conclusion */}
-      <section className="pt-12 pb-4 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="bg-secondary rounded-xl p-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-accent">Final Thoughts</h2>
-          <div className="space-y-4">
-          <p className="text-gray-300">
-            Card Rummy is one of the most popular online card games in the world. It not only provides you with fun or entertainment but also provides you with a great chance to earn money if you play games wisely. This app provides you with a simple and user-friendly interface that can make it easy, especially for beginners, to play games. The deposit or withdrawal system through JazzCash or EasyPaisa is very convenient, which makes this platform very easy to use. If you play responsibly, make plans with smart strategies, and focus on your skill rather than luck, Card Rummy can become a more exciting or rewarding gaming experience.
+          <h2 className="text-3xl font-bold mb-6 text-accent">Why is the ZH88 Game becoming Popular in Pakistan?</h2>
+          <p className="text-gray-300 leading-relaxed">
+            ZH88 Game APK is trending in Pakistan because it pairs entertainment with earning potential. Mobile-friendly
+            design and simple registration lower the entry barrier, while JazzCash and EasyPaisa keep wallet moves
+            familiar. Bonuses and seasonal events also keep daily engagement high for players who enjoy casino-style
+            sessions.
           </p>
+        </div>
+      </section>
+
+      <section id="how-to-earn" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">How to Earn Real Cash Rewards on the ZH88 Game?</h2>
+        <div className="space-y-6">
+          {[
+            ["01. Gameplay Winnings", "Skill, table choice, and bet size influence results. Focused practice on one or two games usually beats random hopping."],
+            ["02. Daily Login Rewards", "Login streaks can grant coins, cash credits, or free spins that add runway for the next session."],
+            ["03. Special Events & Rewards", "Limited-time festivals and challenges often raise prize pools for active players."],
+            ["04. Referral Program", "Invite friends with your code. Successful signups can create longer-term bonus value. See our bonus guide for details."],
+            ["05. Tournaments & Competitions", "Daily and weekly contests offer prize pools and VIP points for strong finishes."],
+          ].map(([title, body]) => (
+            <div key={title} className="bg-secondary rounded-xl p-6 border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+              <p className="text-gray-300 leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-gray-400 text-sm">
+          Want deeper strategy notes? Read{" "}
+          <Link href="/blog/zh88-earning-tips-pakistan-2026" className="text-accent hover:underline">
+            ZH88 earning tips for Pakistan
+          </Link>
+          .
+        </p>
+      </section>
+
+      <section id="download-install" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">How to Download and Install the ZH88 Game?</h2>
+          <ol className="space-y-4 text-gray-300 list-decimal list-inside leading-relaxed">
+            <li>Open Chrome and visit a trusted ZH88 download page such as this site or the official publisher link.</li>
+            <li>Tap the download button and wait until the APK finishes downloading.</li>
+            <li>Go to Settings → Security / Privacy and allow installs from unknown sources for your browser or files app.</li>
+            <li>Open the APK from Downloads and confirm installation.</li>
+            <li>Launch ZH88 Game, register your account, and explore the lobby.</li>
+          </ol>
+          <div className="mt-8 flex justify-center">
+            <CtaButton href={ROUTES.download} ariaLabel="Open ZH88 download guide">
+              Full Download Guide
+            </CtaButton>
           </div>
+        </div>
+      </section>
+
+      <section id="system-requirements" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">System Requirements of the ZH88 Game</h2>
+        <div className="overflow-hidden rounded-2xl border border-gray-800">
+          <table className="min-w-full divide-y divide-gray-800 text-left">
+            <thead className="bg-secondary">
+              <tr>
+                <th className="py-4 px-6 text-accent">Features</th>
+                <th className="py-4 px-6 text-accent">Minimum</th>
+                <th className="py-4 px-6 text-accent">Recommended</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-800 text-gray-300">
+              {[
+                ["Operating System", "Android 5.0+", "Android 8.0+"],
+                ["RAM", "2GB", "4GB"],
+                ["Storage", "500MB", "1GB"],
+                ["Processor", "Dual-core", "Quad-core"],
+                ["Internet", "Stable 3G/4G", "Strong 4G/5G"],
+              ].map((row) => (
+                <tr key={row[0]} className="bg-primary/40">
+                  {row.map((cell) => (
+                    <td key={cell} className="py-4 px-6">
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="why-prefer" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">Why Do Players Prefer ZH88 Over Other Gaming Platforms?</h2>
+          <p className="text-gray-300 leading-relaxed">
+            Players often choose ZH88 Game APK because the interface stays readable and sessions feel smooth for both
+            beginners and regulars. Rewards are structured enough to track progress, and the overall experience feels
+            more consistent than apps that bury menus or delay wallet tools.
+          </p>
+        </div>
+      </section>
+
+      <section id="register" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">How to Register an Account on the ZH88 Game?</h2>
+          <div className="md:flex md:gap-10 items-start">
+            <ol className="space-y-3 text-gray-300 list-decimal list-inside leading-relaxed md:w-2/3">
+              <li>Open the ZH88 Game app and tap Register.</li>
+              <li>Enter a valid phone number or email.</li>
+              <li>Set a strong password with letters, numbers, and symbols.</li>
+              <li>Double-check the details and submit the form.</li>
+              <li>Complete OTP verification and start browsing games.</li>
+            </ol>
+            <PhoneScreenshot
+              src="/zh88-register-account.webp"
+              alt="ZH88 Game registration screen on Android"
+              size="md"
+              className="mt-6 md:mt-0 mx-auto"
+            />
+          </div>
+          <p className="mt-6 text-gray-400 text-sm">
+            Need screenshots and troubleshooting? See the{" "}
+            <Link href="/blog/zh88-login-and-registration-guide" className="text-accent hover:underline">
+              ZH88 login and registration guide
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
+      <section id="login" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">How to log in to the ZH88 Game?</h2>
+          <div className="md:flex md:gap-10 items-start">
+            <ol className="space-y-3 text-gray-300 list-decimal list-inside leading-relaxed md:w-2/3">
+              <li>Launch the ZH88 Game app.</li>
+              <li>Open Login and enter the same credentials used at signup.</li>
+              <li>Use password reset if you forgot your details.</li>
+              <li>Verify the fields and confirm login.</li>
+              <li>Pick a game category that matches your comfort level.</li>
+            </ol>
+            <PhoneScreenshot
+              src="/zh88-login-account.webp"
+              alt="ZH88 Game login screen with account fields"
+              size="md"
+              className="mt-6 md:mt-0 mx-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="payment-methods" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">Methods to Deposit and Withdraw Money on the ZH88 Game</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            ["01. EasyPaisa", "Popular mobile wallet with real-time style transfers and wide 24/7 availability across Pakistan."],
+            ["02. JazzCash", "Widely used digital wallet for quick deposits and withdrawals with a familiar mobile flow."],
+            ["03. Bank Transfer", "Traditional option for larger amounts when you want bank records and stronger transfer trails."],
+          ].map(([title, body]) => (
+            <div key={title} className="bg-secondary rounded-xl p-6 border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+              <p className="text-gray-300 leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="deposit-withdraw-steps" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">How to Deposit and Withdraw Money on the ZH88 Game?</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-secondary rounded-xl p-8 border border-gray-800">
+            <h3 className="text-2xl font-bold text-accent mb-4">Deposit Method</h3>
+            <PhoneScreenshot
+              src="/zh88-deposit-money.webp"
+              alt="ZH88 Game deposit wallet screen for EasyPaisa and JazzCash"
+              size="md"
+              className="mb-4"
+            />
+            <ol className="space-y-2 text-gray-300 list-decimal list-inside leading-relaxed">
+              <li>Open the app and log in.</li>
+              <li>Go to Wallet and tap Deposit.</li>
+              <li>Choose EasyPaisa, JazzCash, or bank transfer.</li>
+              <li>Enter wallet or account details and the amount.</li>
+              <li>Confirm the deposit and wait for the balance update.</li>
+            </ol>
+            <Link href={ROUTES.deposit} className="inline-block mt-4 text-accent hover:underline font-semibold">
+              Full deposit guide →
+            </Link>
+          </div>
+          <div className="bg-secondary rounded-xl p-8 border border-gray-800">
+            <h3 className="text-2xl font-bold text-accent mb-4">Withdrawal Method</h3>
+            <PhoneScreenshot
+              src="/zh88-withdraw-money.webp"
+              alt="ZH88 Game withdraw money screen for Pakistani wallets"
+              size="md"
+              className="mb-4"
+            />
+            <ol className="space-y-2 text-gray-300 list-decimal list-inside leading-relaxed">
+              <li>Log in to ZH88 Game.</li>
+              <li>Open Wallet and tap Withdraw.</li>
+              <li>Select the faster method available to you.</li>
+              <li>Enter accurate account details and amount.</li>
+              <li>Confirm withdrawal and track status in history.</li>
+            </ol>
+            <Link href={ROUTES.withdraw} className="inline-block mt-4 text-accent hover:underline font-semibold">
+              Full withdraw guide →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="tips" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">Tips and Tricks to Maximize Your Earnings</h2>
+          <ul className="space-y-3 text-gray-300 list-disc list-inside leading-relaxed">
+            <li>Play with a fixed budget and avoid chasing losses.</li>
+            <li>Use bonuses only after reading wagering or claim rules.</li>
+            <li>Focus on one or two games until patterns feel natural.</li>
+            <li>Use the referral program as a side boost, not the only plan.</li>
+            <li>Withdraw wins regularly instead of leaving everything in-app.</li>
+            <li>Stay calm—emotional decisions usually cost more than they win.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="safety" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">About the Safety and Security of the ZH88 Game</h2>
+          <ul className="space-y-3 text-gray-300 list-disc list-inside leading-relaxed">
+            <li>Use a strong unique password and never share it.</li>
+            <li>Never share OTP or verification codes.</li>
+            <li>Download only from this site or another trusted official source.</li>
+            <li>Avoid financial actions on public Wi‑Fi.</li>
+            <li>Review account activity regularly for anything unusual.</li>
+            <li>Keep the latest version installed for security patches.</li>
+          </ul>
+          <p className="mt-4 text-gray-400 text-sm">
+            More detail:{" "}
+            <Link href="/blog/is-zh88-safe-real-or-fake-pakistan" className="text-accent hover:underline">
+              Is ZH88 safe, real or fake in Pakistan?
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <section id="vip-lounge" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">VIP Lounge of ZH88 Game</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            ["01. High-Stakes Gameplay", "Access higher tables and challenges that are usually closed to standard accounts."],
+            ["02. Exclusive Deposit Offers", "Custom deposit bonuses and cashback styles tailored for VIP members."],
+            ["03. Personalized Recommendations", "Suggestions based on your history so you spend less time hunting rooms."],
+            ["04. Advanced Security", "Stronger account controls such as alerts and stricter verification for VIP wallets."],
+            ["05. Early Access to New Features", "Try new games and tools before they open to every player."],
+          ].map(([title, body]) => (
+            <div key={title} className="bg-secondary rounded-xl p-6 border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+              <p className="text-gray-300 leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="issues" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">Common Issues & Solutions of the ZH88 Game</h2>
+        <div className="space-y-6">
+          {[
+            {
+              title: "01. Cannot update the App",
+              problem: "Install errors often come from low storage or compatibility conflicts.",
+              solutions: ["Free enough storage", "Uninstall the old build before installing the new APK", "Restart the phone and retry"],
+            },
+            {
+              title: "02. Bonus Not Credited",
+              problem: "Bonuses may wait until offer terms are completed.",
+              solutions: ["Read the bonus terms", "Finish the required actions", "Contact support with your account ID"],
+            },
+            {
+              title: "03. Account Suspension",
+              problem: "Suspicious activity can pause access until verification finishes.",
+              solutions: ["Follow account rules", "Avoid duplicate or fake accounts", "Submit accurate details when asked"],
+            },
+            {
+              title: "04. Slow Performance",
+              problem: "Weak networks cause buffering during live rooms.",
+              solutions: ["Use stable 4G/Wi‑Fi", "Enable low-data mode if available", "Free storage and close heavy apps"],
+            },
+            {
+              title: "05. App Crashing",
+              problem: "Outdated builds or heavy background apps can force closes.",
+              solutions: ["Update to the latest APK", "Clear cache", "Close background apps before playing"],
+            },
+          ].map((issue) => (
+            <div key={issue.title} className="bg-secondary rounded-xl p-6 border border-gray-800">
+              <h3 className="text-xl font-bold text-white mb-2">{issue.title}</h3>
+              <p className="text-gray-300 mb-3">
+                <span className="text-accent font-semibold">Problem:</span> {issue.problem}
+              </p>
+              <p className="text-accent font-semibold mb-2">Solutions</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                {issue.solutions.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="pros-cons" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">Pros and Cons</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-secondary rounded-xl p-8 border border-green-900/40">
+            <h3 className="text-2xl font-bold text-white mb-4">Pros</h3>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+              <li>User-friendly interface</li>
+              <li>Daily bonuses and rewards</li>
+              <li>Multiple game options</li>
+              <li>Fast registration process</li>
+              <li>Smooth gameplay on mid-range phones</li>
+              <li>Regular updates</li>
+              <li>24/7 style customer support channels</li>
+            </ul>
+          </div>
+          <div className="bg-secondary rounded-xl p-8 border border-red-900/40">
+            <h3 className="text-2xl font-bold text-white mb-4">Cons</h3>
+            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+              <li>Risk of financial loss</li>
+              <li>Internet dependency</li>
+              <li>Possible withdrawal delays during peak times</li>
+              <li>In-app purchases and deposits</li>
+              <li>Not suitable for underage users</li>
+              <li>Needs continuous monitoring of balance</li>
+              <li>Competitive environment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-thoughts" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="bg-secondary rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-accent">Final Thoughts</h2>
+          <p className="text-gray-300 leading-relaxed mb-4">
+            ZH88 Game APK is a modern online gaming platform that mixes entertainment with reward-based sessions. The
+            simple interface suits beginners, while bonuses, referrals, and tournaments keep regular players engaged.
+            Like every real-money app, play responsibly and treat ZH88 as entertainment—not a guaranteed income plan.
+          </p>
+          <div className="flex justify-center mt-8">
+            <CtaButton ariaLabel="Download ZH88 Game now">DOWNLOAD NOW</CtaButton>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold mb-8 text-accent">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          {faqs.map((item) => (
+            <details key={item.q} className="bg-secondary rounded-xl border border-gray-800 p-6 group">
+              <summary className="cursor-pointer list-none font-semibold text-white text-lg flex justify-between items-center">
+                {item.q}
+                <span className="text-accent group-open:rotate-45 transition-transform text-2xl leading-none">+</span>
+              </summary>
+              <p className="mt-4 text-gray-300 leading-relaxed">{item.a}</p>
+            </details>
+          ))}
         </div>
       </section>
     </>

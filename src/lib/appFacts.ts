@@ -1,36 +1,25 @@
-import { SITE_ORIGIN } from "@/lib/schemaImageLicensing";
+import {
+  APP_AGGREGATE_RATING,
+  APP_DOWNLOAD_URL,
+  APP_LOGO,
+  APP_SCREENSHOTS,
+  SITE_NAME,
+  SITE_ORIGIN,
+} from "@/lib/site";
 
-/** Matches the homepage hero “200K+ Ratings” claim. */
-export const APP_AGGREGATE_RATING = {
-  "@type": "AggregateRating",
-  ratingValue: "4.5",
-  ratingCount: "200000",
-  bestRating: "5",
-  worstRating: "1",
-} as const;
+export { APP_AGGREGATE_RATING, APP_DOWNLOAD_URL, APP_SCREENSHOTS };
 
-export const APP_DOWNLOAD_URL =
-  "https://pkcardrummy.com/?from_gameid=6276686&channelCode=6191689";
+export const FACEBOOK_PROFILE_URL = "";
 
-export const FACEBOOK_PROFILE_URL =
-  "https://www.facebook.com/share/1at8tjJcje/";
-
-export const ORGANIZATION_SAME_AS = [FACEBOOK_PROFILE_URL] as const;
-
-export const APP_SCREENSHOTS = [
-  `${SITE_ORIGIN}/card-rummy.webp`,
-  `${SITE_ORIGIN}/card-rummy-game-interface.webp`,
-  `${SITE_ORIGIN}/card-rummy-games.webp`,
-  `${SITE_ORIGIN}/card-rummy-earn-bonus.webp`,
-] as const;
+export const ORGANIZATION_SAME_AS: string[] = [];
 
 export const ORGANIZATION_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Card Rummy",
+  name: SITE_NAME,
   url: SITE_ORIGIN,
-  logo: `${SITE_ORIGIN}/card-rummy.webp`,
+  logo: `${SITE_ORIGIN}${APP_LOGO}`,
   description:
-    "Card Rummy is Pakistan's premier card gaming platform, offering Teen Patti, Rummy, and many other card games with real cash rewards.",
-  sameAs: [...ORGANIZATION_SAME_AS],
+    "ZH88 Game is an online earning platform popular for casino-style games, local JazzCash & EasyPaisa payments, and real cash rewards in Pakistan.",
+  sameAs: ORGANIZATION_SAME_AS,
 };
